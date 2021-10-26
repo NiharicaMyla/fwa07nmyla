@@ -17,9 +17,9 @@ router.get("/", function (req, res, next) {
 
   floor = Math.floor(num1);
 
-  res.send(`log applied to ${num1}, ${num2} is ${log} <br>
-            cosh applied to 0.5 is ${cosh} <br>
-            floor applied to ${num1} is ${floor}`);
+  res.send(`log applied to :         ${num1}, ${num2} is ${log} <br>
+            cosh applied to 0.5 is:  ${cosh} <br>
+            floor applied to:        ${num1} is ${floor}`);
 });
 
 module.exports = router;
