@@ -9,15 +9,14 @@ var floor;
 
 router.get("/", function (req, res, next) {
   num1 = Math.random() * (100 - 1) + 1;
-  num2 = Math.random() * (100 - 1) + 1;
-
-  log = Math.log(num1, num2);
+ 
+  log = Math.log(num1);
 
   cosh = Math.cosh(45);
 
   floor = Math.floor(num1);
 
-  res.send(`log of ${num1}, ${num2} is: ${log} <br>
+  res.send(`log of ${num1} is: ${log} <br>
         cosh of 45 is: ${cosh} <br>
             floor of ${num1} is: ${floor}`);
 });
