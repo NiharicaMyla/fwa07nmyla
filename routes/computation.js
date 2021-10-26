@@ -13,12 +13,12 @@ router.get("/", function (req, res, next) {
 
   log = Math.log(num1, num2);
 
-  cosh = Math.cosh(0.5);
+  cosh = Math.cosh(45);
 
   floor = Math.floor(num1);
 
   res.send(`log applied to : ${num1}, ${num2} is ${log} <br>
-        cosh applied to 0.5 is: ${cosh} <br>
+        cosh applied to 45 is: ${cosh} <br>
             floor applied to ${num1} is: ${floor}`);
 });
 
