@@ -4,8 +4,8 @@ var value = 0;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  value++;
-  res.send('/', "User accesses are:", value);
+  value+=1;
+  res.send("User accesses are:", +value);
 
 });
 
