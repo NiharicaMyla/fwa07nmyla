@@ -1,25 +1,25 @@
 var express = require("express");
 var router = express.Router();
-var rno;
-var atan2;
-var atanh;
-var cbrt;
+var num1;
+var log;
+var cosh;
+var floor;
 
 /* GET users listing. */
 
 router.get("/", function (req, res, next) {
-  rno = Math.random() * (100 - 1) + 1;
-  rno1 = Math.random() * (100 - 1) + 1;
+  num1 = Math.random() * (100 - 1) + 1;
+  num2 = Math.random() * (100 - 1) + 1;
 
-  atan2 = Math.atan2(rno, rno1);
+  log = Math.log(num1, num2);
 
-  atanh = Math.atanh(0.5);
+  cosh = Math.cosh(0.5);
 
-  cbrt = Math.cbrt(rno);
+  floor = Math.floor(num1);
 
-  res.send(`atan2 applied to ${rno}, ${rno1} is ${atan2} <br>
-            atanh applied to 0.5 is ${atanh} <br>
-            cbrt applied to ${rno} is ${cbrt}`);
+  res.send(`log applied to ${num1}, ${num2} is ${log} <br>
+            cosh applied to 0.5 is ${cosh} <br>
+            floor applied to ${num1} is ${floor}`);
 });
 
 module.exports = router;
