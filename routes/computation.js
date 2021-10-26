@@ -1,16 +1,25 @@
-
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var x ;
+var rno;
+var atan2;
+var atanh;
+var cbrt;
+
 /* GET users listing. */
-router.get('/', function (req, res, next) {
- 
-x = Math.floor(Math.cosh()*100)+1;
-// res.send('hello');
-res.write('[Math.cosh()] applied to ' + `${ [x]}` + ' is ' + `${[Math.cosh(x)]}\n`);
- 
-res.write('[Math.log2()] applied to ' + `${ [x]}` + ' is ' + `${[Math.log2(x)]}`);
-res.end();
+
+router.get("/", function (req, res, next) {
+  rno = Math.random() * (100 - 1) + 1;
+  rno1 = Math.random() * (100 - 1) + 1;
+
+  atan2 = Math.atan2(rno, rno1);
+
+  atanh = Math.atanh(0.5);
+
+  cbrt = Math.cbrt(rno);
+
+  res.send(`atan2 applied to ${rno}, ${rno1} is ${atan2} <br>
+            atanh applied to 0.5 is ${atanh} <br>
+            cbrt applied to ${rno} is ${cbrt}`);
 });
 
-module.exports=router;
+module.exports = router;
