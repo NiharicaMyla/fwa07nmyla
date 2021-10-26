@@ -13,4 +13,4 @@ res.write('[Math.log2()] applied to ' + `${ [x]}` + ' is ' + `${[Math.log2(x)]}`
 res.end();
 });
 
-module.exports=router
+module.exports=router;
