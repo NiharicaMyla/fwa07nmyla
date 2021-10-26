@@ -5,11 +5,11 @@ var x ;
 /* GET users listing. */
 router.get('/', function (req, res, next) {
  
-x = Math.floor(Math.random()*100)+1;
+x = Math.floor(Math.cosh()*100)+1;
 // res.send('hello');
-res.write('[Math.random()] applied to ' + `${ [x]}` + ' is ' + `${[Math.random(x)]}\n`);
+res.write('[Math.cosh()] applied to ' + `${ [x]}` + ' is ' + `${[Math.cosh(x)]}\n`);
  
-res.write('[Math.round()] applied to ' + `${ [x]}` + ' is ' + `${[Math.round(x)]}`);
+res.write('[Math.log2()] applied to ' + `${ [x]}` + ' is ' + `${[Math.log2(x)]}`);
 res.end();
 });
 
